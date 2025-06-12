@@ -21,10 +21,10 @@
                     <h1>Talkn.Tech</h1>
                 </div>
                 <nav class="nav-menu">
-                    <a href="#features">Features</a>
+                    <a href="#features">Why Talkn.Tech?</a>
                     <a href="#how-it-works">How It Works</a>
-                    <a href="#faq">FAQ</a>
-                    <a href="#contact" class="cta-secondary">Contact</a>
+                    <a href="#ideal-businesses">Ideal Businesses</a>
+                    <a href="#contact-form" class="cta-secondary open-form">Contact</a>
                 </nav>
             </div>
         </div>
@@ -37,7 +37,7 @@
                 <h1 class="hero-title">Simple AI Chat for Your Business - No Apps Required</h1>
                 <p class="hero-subtitle">Get a unique URL and QR code that lets customers instantly chat with an AI assistant about your business. Share it anywhere - your website, Google Business, social media, or print materials. We handle everything for you.</p>
                 <div class="hero-cta">
-                    <a href="#contact" class="btn-primary">Get Your AI Chat Link</a>
+                    <a href="#contact-form" class="btn-primary open-form">Get Your AI Chat Link</a>
                     <a href="#how-it-works" class="btn-secondary">See How It Works</a>
                 </div>
                 <div class="hero-features">
@@ -50,31 +50,6 @@
                     <div class="feature-badge">
                         <span>📱 No App Download</span>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section id="how-it-works" class="how-it-works">
-        <div class="container">
-            <h2 class="section-title">How It Works</h2>
-            <p class="section-subtitle">Get up and running in just 3 simple steps</p>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Share Your Business Info</h3>
-                    <p>Provide your FAQ, menu, services, pricing, and other common customer questions. We'll set up everything for you.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Get Your AI Chat Link & QR Code</h3>
-                    <p>We create a unique URL and QR code that connects customers directly to your AI assistant.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Share Anywhere</h3>
-                    <p>Add the link to your website, Google Business profile, social media, or print the QR code on materials. Customers chat instantly without downloading apps.</p>
                 </div>
             </div>
         </div>
@@ -119,8 +94,33 @@
         </div>
     </section>
 
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">Get up and running in just 3 simple steps</p>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Share Your Business Info</h3>
+                    <p>Provide your FAQ, menu, services, pricing, and other common customer questions. We'll set up everything for you.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Get Your AI Chat Link & QR Code</h3>
+                    <p>We create a unique URL and QR code that connects customers directly to your AI assistant.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Share Anywhere</h3>
+                    <p>Add the link to your website, Google Business profile, social media, or print the QR code on materials. Customers chat instantly without downloading apps.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Who It's For Section -->
-    <section class="who-its-for">
+    <section id="ideal-businesses" class="who-its-for">
         <div class="container">
             <h2 class="section-title">Perfect for Your Business</h2>
             <p class="section-subtitle">Ideal for small and medium-sized businesses that want to improve customer communication</p>
@@ -188,7 +188,7 @@
             <div class="cta-content">
                 <h2>Ready to Give Your Customers Instant Answers?</h2>
                 <p>Join businesses already using Talkn.Tech to provide 24/7 customer support with a simple URL and QR code solution.</p>
-                <a href="#contact" class="btn-primary">Get Your AI Chat Link</a>
+                <a href="#contact-form" class="btn-primary open-form">Get Your AI Chat Link</a>
             </div>
         </div>
     </section>
@@ -214,6 +214,39 @@
             </div>
         </div>
     </footer>
+
+    <!-- Contact Form Modal -->
+    <div id="contact-form" class="form-modal" aria-hidden="true">
+        <div class="form-container">
+            <button class="close-form" aria-label="Close form">&times;</button>
+            <h2>Get Started with Talkn.Tech</h2>
+            <form>
+                <label>Full Name
+                    <input type="text" name="fullName" required>
+                </label>
+                <label>Business Name
+                    <input type="text" name="business" required>
+                </label>
+                <label>Type of Business
+                    <select name="businessType" required>
+                        <option value="" disabled selected>Select type</option>
+                        <option>Restaurant</option>
+                        <option>Retail</option>
+                        <option>Salon</option>
+                        <option>Service Provider</option>
+                        <option>Other</option>
+                    </select>
+                </label>
+                <label>Email
+                    <input type="email" name="email" required>
+                </label>
+                <label>Phone (optional)
+                    <input type="tel" name="phone">
+                </label>
+                <button type="submit" class="btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
 
     <!-- Simple smooth scrolling script -->
     <script>
@@ -248,6 +281,18 @@
                     faqItem.classList.add('active');
                 }
             });
+        });
+
+        // Contact form handlers
+        const formModal = document.getElementById('contact-form');
+        document.querySelectorAll('.open-form').forEach(btn => {
+            btn.addEventListener('click', function(event) {
+                event.preventDefault();
+                formModal.classList.add('active');
+            });
+        });
+        formModal.querySelector('.close-form').addEventListener('click', function() {
+            formModal.classList.remove('active');
         });
     </script>
 </body>
