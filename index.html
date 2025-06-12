@@ -222,10 +222,10 @@
             <h2>Get Started with Talkn.Tech</h2>
             <form action="https://formsubmit.co/11a6004b7fa9f24c765f27596c1d4ce0" method="POST">
                 <label>Full Name
-                    <input type="text" name="fullName" required>
+                    <input type="text" name="fullName" required maxlength="100">
                 </label>
                 <label>Business Name
-                    <input type="text" name="business" required>
+                    <input type="text" name="business" required maxlength="100">
                 </label>
                 <label>Type of Business
                     <select name="businessType" required>
@@ -238,13 +238,13 @@
                     </select>
                 </label>
                 <label>Email
-                    <input type="email" name="email" required>
+                    <input type="email" name="email" required maxlength="100">
                 </label>
                 <label>Phone (optional)
-                    <input type="tel" name="phone">
+                    <input type="tel" name="phone" maxlength="20">
                 </label>
                 <label>Message
-                    <textarea name="message" required></textarea>
+                    <textarea name="message" required maxlength="500"></textarea>
                 </label>
                 <button type="submit" class="btn-primary">Submit</button>
             </form>
