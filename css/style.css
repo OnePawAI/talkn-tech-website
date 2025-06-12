@@ -612,10 +612,16 @@ p {
 }
 
 .form-container input,
-.form-container select {
+.form-container select,
+.form-container textarea {
     padding: 0.5rem;
     border: 1px solid #cbd5e1;
     border-radius: 4px;
+}
+
+.form-container textarea {
+    min-height: 100px;
+    resize: vertical;
 }
 
 .form-container button[type="submit"] {
