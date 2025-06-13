@@ -460,7 +460,7 @@ p {
 .footer-bottom {
     border-top: 1px solid #334155;
     padding-top: 2rem;
-    text-center;
+    text-align: center;
     color: #94a3b8;
 }
 
